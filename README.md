@@ -1,5 +1,5 @@
 # ParsingJSONUsingCFromPanther
-Sample code on how to parse JSON data using C from Panther. JSON data is sent from a caller screen to servicescreen.jam screen which sends a response back to the first screen as parsed JSON data with the help of a C function.  
+Sample code to parse JSON data using C from Panther. JSON data is sent from a caller screen to servicescreen.jam screen which sends a response back to the first screen as parsed JSON data with the help of a C function.  
 
 # Prerequisites
 Panther Web 5.5*
