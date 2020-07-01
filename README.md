@@ -19,7 +19,9 @@ Contains a Panther push button from which a JavaScript function is executed from
 Contains 2 single line text fields and 2 multiline text fields. One MLT is used to get JSON data from the caller screen and the other MLT gets JSON parsed data from the C function. In the JPL in web_enter function is executing the C function that parses the JSON data.
 
 # Funclist.c
-Consist that the function <> that  parses the JSON data. To use this feature please rebuild your JServer using the funclist.c that consist specific C code.    
+Consist that the functions below that  parses the JSON data. To use this feature please rebuild your JServer using the funclist.c that consist specific C code.    
+static	int	walk_jsmn	PROTO((char *, jsmntok_t *, char *, int, jsmn_callback_t f));
+static	int	jsmn_putfield	PROTO((char *fieldname, char *value, int occur));
 
 # Caller.html
 HTML template is attached to the Panther caller screen via property WEB OPTION->HTML OPTIONs->HTML Template. It consist of a JavaScript function called from the on_click property of a push button. The function also makes an AJAX call to send JSON data to the servicescreen.jam. 
@@ -28,8 +30,6 @@ HTML template is attached to the Panther caller screen via property WEB OPTION->
 Panther caller that consist of raw MLT property to get the response.
 
 Need a Panther Web 552 Redhat Image? [Click Here](https://hub.docker.com/r/prolificspanther/pantherweb "Named link title") 
-
-[Click Here](https://prolifics.com/panther-trial-license-request/ "Named link title") for a 45-day license.
 
 How to set up a Panther Servlet Web Application? [Click Here](https://github.com/ProlificsPanther/PantherWeb/releases "Named link title")
 
