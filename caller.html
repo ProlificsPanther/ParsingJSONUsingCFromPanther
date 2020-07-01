@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>screen1</title>
+<script	src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+{{form:tag}}
+{{form:info}}
+{{form:messages}}
+<div>{{emit:submit}}</div>
+
+<script>
+
+function callService(serviceName, data, callback) {
+	var serviceScreen = 'servicescreen.jam';
+	var formdata = {
+	                    __posted_screen_name__ : serviceScreen,
+	                    __end_of_jpl_vars__    : 0
+	               };
+
+	formdata['n_service_name'] = serviceName;
+	formdata['mn_jsoninput'] = data;
+
+	var saveData = $.ajax({
+		type: 'POST',
+		url: serviceScreen,
+		data: formdata,
+		success: function(resultdata){
+		
+		alert(resultdata);
+		console.log(resultdata);
+			
+		},
+		error: function (textStatus, errorThrown) {
+            alert("error");
+        }
+		
+	});
+	
+	}
+
+
+function doSomething() {
+	var mydata = '{"name":"subhan", "age":"20"}';
+
+	callService("myservice", mydata, "serviceCallback");
+}
+
+</script>
+{{form:script}}
+
+</form>
+</body>
+</html>
