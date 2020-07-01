@@ -19,7 +19,7 @@ Panther Web 5.5*
  One MLT gets JSON data from the caller screen and the other MLT gets JSON parsed data from the C function. JPL in the web_enter() function executes the C function that parses the JSON data.
 
 # Funclist.c
-Consist of functions below that  parses the JSON data. To use this feature please rebuild your JServer  these  C functions.    
+Consist of functions below that  parses the JSON data. To use this feature please rebuild your JServer with these C functions.    
 static	int	walk_jsmn	PROTO((char *, jsmntok_t *, char *, int, jsmn_callback_t f));
 static	int	jsmn_putfield	PROTO((char *fieldname, char *value, int occur));
 
