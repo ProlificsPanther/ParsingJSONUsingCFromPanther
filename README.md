@@ -13,7 +13,7 @@ Panther Web 5.5*
 
 
 # Caller screen
- Executes on_click  JavaScript function   from pushbutton
+ Executes on_click JavaScript function from pushbutton
 
 # Servicescreen screen
  One MLT gets JSON data from the caller screen and the other MLT gets JSON parsed data from the C function. JPL in the web_enter() function executes the C function that parses the JSON data.
@@ -27,7 +27,7 @@ static	int	jsmn_putfield	PROTO((char *fieldname, char *value, int occur));
 HTML template is attached to the Panther caller screen via property WEB OPTION->HTML OPTIONs->HTML Template. It consist of a JavaScript function called from the on_click property of a push button. The function also makes an AJAX call to send JSON data to servicescreen.jam. 
 
 # Servicescreen.html
-Consist of raw MLT property to get the response.
+Consists of raw MLT property to get the response.
 
 Need a Panther Web 552 Redhat Image? [Click Here](https://hub.docker.com/r/prolificspanther/pantherweb "Named link title") 
 
